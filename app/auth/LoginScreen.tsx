@@ -4,12 +4,12 @@ import { useRouter } from 'expo-router';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ThemedView } from '@/components/ThemedView';
+import API_URL from '../config';
 
 export default function LoginScreen() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
-  const API_URL = 'http://192.168.56.1:3000'
 
   const handleLogin = async () => {
     try {

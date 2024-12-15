@@ -10,13 +10,14 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import axios from 'axios';
+import API_URL from '../config';
+
 
 export default function RegisterScreen() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const router = useRouter();
-  const API_URL = 'http://192.168.56.1:3000'
 
   const handleRegister = async () => {
     try {
